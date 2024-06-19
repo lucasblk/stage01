@@ -15,7 +15,7 @@ body, input, button, select, textarea {
 }
 header {
     width: 320px;
-    margin-top: 80px;
+    margin-top: 140px;
 }
 header h1 {
     font-family: "Archivo", sans-serif;
@@ -29,7 +29,7 @@ header h1 {
 header p {
     font-size: 16px;
     line-height: 26px;
-    color: #42D3FF;
+    color: white;
     margin-bottom: 42px;
 }
 
@@ -49,6 +49,7 @@ body {
     font-size: 36px;
     line-height: 42px;
     background: #D9DAD8;
+    color: #535971;
 }
 
 body::before {
@@ -59,7 +60,7 @@ body::before {
     top: 0;
     left: 0;
     z-index: -1;
-    background: black;
+    background: #535971;
 }
 
 
@@ -79,6 +80,10 @@ fieldset legend {
     width: 100%;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.215)
+}
+.completeName {
+    display: flex;
+    gap: 20px;
 }
 
 .input-wrapper {
@@ -133,19 +138,44 @@ fieldset legend {
     background-position: right 24px top 50%;
 }
 
-.col-3 {
+section {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
 }
 
-.col-3 > div:nth-child(1){
+.legend {
+    font-size: 0.5em;
+    border: 0px;
+    margin-top: 40px;
+}
+
+.mentorship1, .mentorship2 {
+    display: flex;
+    gap: 5px;
+}
+
+.mentorship1 div:nth-child(1) {
     width: 100%;
+
 }
-.col-3 > div:nth-child(2){
-    width: 200px;
+.mentorship1 div:nth-child(2) {
+    width: 120px;
+
 }
-.col-3 > div:nth-child(3){
-    width: 200px;
+.mentorship1 div:nth-child(3) {
+    width: 120px;
+}
+
+.mentorship2 div:nth-child(1) {
+    width: 100%;
+
+}
+.mentorship2 div:nth-child(2) {
+    width: 120px;
+
+}
+.mentorship2 div:nth-child(3) {
+    width: 120px;
 }
 
 .checkbox {
@@ -187,7 +217,7 @@ fieldset legend {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: #F0F0F4;
+    background-color: #535971;
     border-radius: 0 0 8px 8px;
     height: 136px;
     padding: 40px 65px;
@@ -196,18 +226,18 @@ footer {
 
 footer .button {
     height: 56px;
-    border-radius: 5px;
-    background-color: rgb(100, 161, 7);
+    border-radius: 25px;
+    background-color: #F55474;
     color: white;
     border: 0;
 
     font-family: "Archivo", sans-serif;
-    font-weight: 600px;
+    font-weight: 800px;
     line-height: 26px;
     font-size: 16px;
     
 }
 
 footer .button:hover {
-    background-color: rgb(134, 218, 9);
+    background-color: #f46884;
 }

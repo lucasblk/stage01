@@ -21,24 +21,92 @@
     
         </header>
     
-        <form action="" method="get">
+        <form action="" method="get" id="my-form">
             
             <fieldset>
-                <legend>
-                    informacoes de Envio
-                </legend>
+                <div class="fieldset-wrapper">
+                    <legend>
+                        informacoes de Envio
+                    </legend>
+                
 
-                <div class="input-wrapper">
-
-                    <label for="event-title">Titulo do Evento: <span>(minimo 8 caracteres)</span></label>
-                    <input type="text" name="event-title">
-
+                    <div class="input-wrapper">
+                        <label for="event-title">Titulo do Evento: <span>(minimo 8 caracteres)</span></label>
+                        <input type="text" name="event-title" id="event-title">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-link">Link do Evento: <span>(comece com https://)</span></label>
+                        <input type="url" id="event-link">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-whats">Whatsapp para contato: <span>(somente numeros)</span></label>
+                        <input type="number" id="event-whats">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-info">Informacoes Extras</label>
+                        <textarea id="event-info"></textarea>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-category">Categoria</label>
+                        <select id="category">
+                            <option value="live">Ao vivo</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="mentorship">Mentoria</option>
+                        </select>
+                    </div>
 
                 </div>
 
             </fieldset>
 
+            <fieldset>
+                <div class="fieldset-privacy">
+                    <legend>
+                        Privacidade
+                    </legend>
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-email">Email do Administrador <span>(digite um email valido)</span></label>
+                    <input type="email" name="event-email" id="event-email">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="event-password">Senha de acesso aos participantes <span>(minimo 8 caracteres)</span></label>
+                    <input type="password" name="event-password" id="event-password">
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="event-checkbox" id="event-checkbox">
+                    <label for="event-checkbox">Evento Privado</label>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <div class="fieldset-date">
+                    <legend>
+                        Dia e hora
+                    </legend>
+                </div>
+                <div class="col-3">
+                    <div class="input-wrapper">
+                        <label for="event-date">Data</label>
+                        <input type="date" name="event-date" id="event-date">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-begin">Das</label>
+                        <input type="time" name="event-begin" id="event-begin">
+                    </div><div class="input-wrapper">
+                        <label for="event-end">Ate</label>
+                        <input type="time" name="event-end" id="event-end">
+                    </div>
+                </div>
+            </fieldset>
+
         </form>
+        <footer>
+            <input class="button" type="submit" value="Salvar Evento" form="my-form">
+        </footer>
 
     </div>
 </body>
