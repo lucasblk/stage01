@@ -8,123 +8,96 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario B</title>
+    <title>Formulario C</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="page">
+    <div class="page">
         <header>
-    
-            <h1>MENTORIA</h1>
-            <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
-    
+                <h1>
+                    AVALIE A SUA MENTORIA
+                </h1>
+                <p>
+                    Chegou a hora de avaliar o seu mentor. Bora lá?
+                </p>
+                <div id="img"><img src="images/img1.png" alt="imagem"></div>
         </header>
-    
-        <form action="" method="get" id="my-form">
-            
-            <fieldset>
-                <div class="fieldset-wrapper">
-                    <legend>
-                        Informações pessoais
-                    </legend>
-                    
-                    
-                    <div class="completeName">
-                        <div class="input-wrapper">
-                            <label for="event-name">Nome</label>
-                            <input type="text" name="event-name" id="event-name">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="event-surname">Sobrenome</label>
-                            <input type="url" id="event-surname">
-                        </div> 
-                        
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="event-email">Email<span>(digite um email valido)</span></label>
-                        <input type="email" name="event-email" id="event-email">
-                </div>
-        
-                <div class="input-wrapper">
-                        <label for="event-password">Senha<span>(minimo 8 caracteres)</span></label>
-                        <input type="password" name="event-password" id="event-password">
-                
-                </div>
-                
-            </fieldset>
+        <main>
+            <div>
+                <legend class="legend-title">
+                    <p>INFORMACOES PESSOAIS</p>
+                </legend>
+            </div>
+            <form action="" method="get">
+                <fieldset class="personal-info">
 
-            <fieldset>
-                <div class="fieldset-mentorship">
+                    <div class="completeName">
+
+                        <div class="input-wrap">
+                            <label for="name">Nome: </label>
+                            <input type="text" name="name" id="name">
+                        </div>
+
+                        <div class="input-wrap">
+                            <label for="surname">Sobrenome:</label>
+                            <input type="text" name="surname" id="surname">
+                        </div>
+
+                    </div>
+
+                        <div class="input-wrap">
+                            <label for="email">Email <span>(Digite um email valido)</span></label>
+                            <input type="email" name="email" id="email">
+                        </div>
+
+                </fieldset>
+
+                <fieldset>
                     <legend>
                         INFORMACOES DO MENTOR
                     </legend>
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="event-mentorname">Nome do seu Mentor<span>(somente o primeiro nome)</span></label>
-                    <input type="text" name="event-mentorname" id="event-mentorname">
-                </div>
-
-            </fieldset>
-
-            <fieldset>
-                <div class="fieldset-date">
-                    <legend>
-                        SEUS HORARIOS DISPONIVEIS
-                    </legend>
-                </div>
-                <div class="fieldset-date">
-                    <legend class="legend">
-                        PRIMEIRA MENTORIA
-                    </legend>
-                </div>
-                    <section>
-                        <div class="mentorship1">
-                            <div class="input-wrapper" class="date1">
-                                <label for="event-date1">Data <span>(DD/MM/AA)</span></label>
-                                <input type="date" name="event-date1" id="event-date1">
-                            </div>
-                            <div class="input-wrapper" class="date1">
-                                <label for="event-begin1">Das</label>
-                                <input type="time" name="event-begin1" id="event-begin1">
-                            </div>
-                            <div class="input-wrapper" class="date1" >
-                                <label for="event-end1">Ate</label>
-                                <input type="time" name="event-end1" id="event-end1">
-                            </div>
+                    <div class="mentor-info">
+                        <div class="input-wrap">
+                            <label for="which-mentor">Selecione quem foi seu mentor:</label>
+                            <select name="which-mentor" id="which-mentor">
+                                <option value="Joao">Joao</option>
+                                <option value="Maria">Maria</option>
+                                <option value="Pedro">Pedro</option>
+                            </select>
                         </div>
-                    </section>
-
-                    <div class="fieldset-date">
-                        <legend class="legend">
-                            SEGUNDA MENTORIA
-                        </legend>
+                        <div class="input-wrap">
+                            <label for="feedback">Feedback sobre o mentor:</label>
+                            <textarea name="feedback" id="feedback"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="check" id="check">
+                            <label for="check">Todas as minhas duvidas foram esclarecidas</label>
+                        </div>
                     </div>
+                </fieldset>
 
-                    <section>
-                        <div class="mentorship2">
-                            <div class="input-wrapper">
-                                <label for="event-date">Data <span>(DD/MM/AA)</span></label>
-                                <input type="date" name="event-date" id="event-date">
-                            </div>
-                            <div class="input-wrapper">
-                                <label for="event-begin">Das</label>
-                                <input type="time" name="event-begin" id="event-begin">
-                            </div>
-                            <div class="input-wrapper">
-                                <label for="event-end">Ate</label>
-                                <input type="time" name="event-end" id="event-end">
-                            </div>
+                <fieldset>
+                    <legend>
+                        AGENDE SUA PROXIMA MENTORIA
+                    </legend>
+                    <div class="schedule-info">
+                        <div class="input-wrap-datetime">
+                            <label for="date">Data <span>(DD/MM/AA)</span></label>
+                            <input type="date" name="date" id="date">
                         </div>
-                    </section>
-                    
-            </fieldset>
-
-        </form>
-        <footer>
-            <input class="button" type="submit" value="Salvar Evento" form="my-form">
-        </footer>
-
+                        <div class="input-wrap-datetime">
+                            <label for="begin">Das</label>
+                            <input type="time" name="begin" id="begin">
+                        </div>
+                        <div class="input-wrap-datetime">
+                            <label for="end">Ate</label>
+                            <input type="time" name="end" id="end">
+                        </div>
+                    </div>
+                    <button type="submit">SALVAR</button>
+                </fieldset>
+            </form>
+        </main>
     </div>
 </body>
 </html>
